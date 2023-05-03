@@ -2,7 +2,7 @@
 
 **An API wrapper created to access and use Twitter's official documented API.**
 
-### Core features of this calculator include:
+### Core features of this wrapper include:
 - Authenticate with a Twitter application
 - Create Tweets
 - Delete Tweets
