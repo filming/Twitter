@@ -19,6 +19,7 @@ def create_tweet(tas, message, media_ids = None, reply_ids = None):
 	
 	return 1, (r.text,)
 
-# this will delete a tweet
+# this will delete a tweet based on a given tweet-id
 def delete_tweet(tas, tweet_id):
-	pass
+	r = tas.delete(f"https://api.twitter.com/2/tweets/{tweet_id}")
+	resp = json.loads(r.text)

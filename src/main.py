@@ -1,4 +1,5 @@
 from Twitter import Twitter
+from time import sleep
 
 def main():
     twitter = Twitter()
@@ -11,21 +12,12 @@ def main():
     print ("Good morning tweet has been sent!")
 
     # delete good morning tweet
+    sleep(30)
+    twitter.delete_tweet(tweet_id)
+    print ("Good morning tweet has been deleted!")
     
-    
-
-    
-    
-
-
     # send a good night tweet with a picture of the moon
     
     
-
-
-
-
-
-
 if __name__ == "__main__":
     main()

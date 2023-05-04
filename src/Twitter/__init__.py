@@ -1,5 +1,5 @@
 from .auth.create_tas import create_tas
-from .tweet.tweet import create_tweet
+from .tweet.tweet import create_tweet, delete_tweet
 from .tweet.media import get_media_id
 
 import sys
@@ -37,4 +37,8 @@ class Twitter():
         tweet_id = raw_return[1][0]
 
         return tweet_id
+    
+    # this will delete a tweet based on a given tweet-id
+    def delete_tweet(self, tweet_id):
+        delete_tweet(self.tas, tweet_id)
     
