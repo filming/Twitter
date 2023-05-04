@@ -5,11 +5,15 @@ def main():
     twitter.create_tas()
 
     # send a good morning tweet with a picture of the sun
-    sun_media_id = Twitter.get_media_id("media/sun.png")
+    sun_media_id = twitter.get_media_id("media/sun.png")
 
-    twitter.create_tweet("Good morning!", sun_media_id)
+    tweet_id = twitter.create_tweet("Good morning!", sun_media_id)
+    print ("Good morning tweet has been sent!")
 
+    # delete good morning tweet
 
+    
+    
 
 
     # send a good night tweet with a picture of the moon

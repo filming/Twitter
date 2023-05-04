@@ -1,6 +1,6 @@
-from auth.create_tas import create_tas
-from tweet.tweet import create_tweet
-from tweet.media import get_media_id
+from .auth.create_tas import create_tas
+from .tweet.tweet import create_tweet
+from .tweet.media import get_media_id
 
 import sys
 
@@ -11,7 +11,7 @@ class Twitter():
         self.auth_username = ""
     
     # this will end the program when the the raw_return[0] indicates an error
-    def error_handle(raw_return):
+    def error_handle(self, raw_return):
         if raw_return[0] == 1:
             sys.exit(raw_return[1][0])
 
@@ -37,5 +37,4 @@ class Twitter():
         tweet_id = raw_return[1][0]
 
         return tweet_id
-    
     
