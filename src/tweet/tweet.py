@@ -18,3 +18,7 @@ def create_tweet(tas, message, media_ids = None, reply_ids = None):
 		return 0, tweet_id
 	
 	return 1, r.text
+
+# this will delete a tweet
+def delete_tweet(tas, tweet_id):
+	pass
