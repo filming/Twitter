@@ -7,7 +7,7 @@ from datetime import datetime
 
 load_dotenv()
 
-# creating twitter authorized session object
+# create twitter authorized session object
 def create_tas():
 	
 	# getting the env variables and making sure they do exist
