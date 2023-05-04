@@ -17,7 +17,10 @@ def main():
     print ("Good morning tweet has been deleted!")
     
     # send a good night tweet with a picture of the moon
-    
+    moon_media_id = twitter.get_media_id("media/moon.png")
+
+    tweet_id = twitter.create_tweet("Good night!", moon_media_id)
+    print ("Good night tweet has been sent!")
     
 if __name__ == "__main__":
     main()
