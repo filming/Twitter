@@ -1,15 +1,18 @@
-from extra.error_handling import error_handle
-from auth.create_tas import create_tas
-from tweet.tweet import create_tweet
+from Twitter import Twitter
 
 def main():
-    raw_return = create_tas()
-    error_handle(raw_return)
-    tas = raw_return[1][0]
+    twitter = Twitter()
+    twitter.create_tas()
 
-    tweet_message = "Hello!"
-    create_tweet(tas, tweet_message)
-    print ("Tweeted!")
+    # send a good morning tweet with a picture of the sun
+    sun_media_id = Twitter.get_media_id("media/sun.png")
+
+    twitter.create_tweet("Good morning!", sun_media_id)
+
+
+
+
+    # send a good night tweet with a picture of the moon
     
     
 
